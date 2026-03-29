@@ -1,5 +1,4 @@
-const BASE_URL = "https://your-backend.onrender.com";
-
+const BASE_URL = "https://clone-project-6u5j.onrender.com";
 const API = {
   async request(method, endpoint, data = null) {
     const opts = {
