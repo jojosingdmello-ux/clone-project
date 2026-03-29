@@ -59,12 +59,26 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, async () => {
-  console.log(`\n🚀 Amazon Clone running at http://localhost:${PORT}`);
-  console.log(`   Environment: ${process.env.NODE_ENV}\n`);
+//app.listen(PORT, async () => {
+  //console.log(`\n🚀 Amazon Clone running at http://localhost:${PORT}`);
+  //console.log(`   Environment: ${process.env.NODE_ENV}\n`);
 
   // 🚨 AUTO SETUP (TEMP)
+  //if (process.env.NODE_ENV === 'production') {
+//	require('./db/setup');
+//}
+
+
+
+
+//});
+//
+//
+//
+app.listen(PORT, async () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+
   if (process.env.NODE_ENV === 'production') {
-	require('./db/setup');
-}
+    require('./db/setup');
+  }
 });
