@@ -1,3 +1,5 @@
+const BASE_URL = "https://your-backend.onrender.com";
+
 const API = {
   async request(method, endpoint, data = null) {
     const opts = {
@@ -6,7 +8,9 @@ const API = {
       credentials: 'include',
     };
     if (data) opts.body = JSON.stringify(data);
-    const res = await fetch('/api' + endpoint, opts);
+
+    const res = await fetch(BASE_URL + '/api' + endpoint, opts);
+
     const json = await res.json();
     if (!res.ok) throw new Error(json.error || 'Request failed');
     return json;
